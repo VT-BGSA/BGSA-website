@@ -179,11 +179,6 @@ function renderLeadership() {
   }
 }
 
-  if (previousMount && Array.isArray(leadership.previous)) {
-    previousMount.innerHTML = leadership.previous.map((person) => `
-      <div><strong>${escapeHtml(person.role || '')}</strong><span>${escapeHtml(person.name || '')}</span></div>`).join('');
-  }
-}
 
 // ----------------------------
 // Merchandise
