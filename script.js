@@ -141,7 +141,7 @@ function renderLeadership() {
           <div class="profile-body">
             <div class="role">${escapeHtml(person.role || '')}</div>
             <h3>${escapeHtml(person.name || '')}</h3>
-            ${affiliation}${bio}
+            ${affiliation}
             ${bio}
             ${profileLink}
           </div>
