@@ -176,7 +176,9 @@ window.BGSA_SITE = {
         name: "Sophia Smith",
         photo: "assets/leader-09.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
       }
     ],
 

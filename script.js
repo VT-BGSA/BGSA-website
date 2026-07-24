@@ -130,6 +130,9 @@ function renderLeadership() {
         ? `<p class="profile-affiliation">${escapeHtml(person.affiliation)}</p>` : '';
       const bio = hasValue(person.bio)
         ? `<p class="profile-note">${escapeHtml(person.bio)}</p>` : '';
+        const profileLink = hasValue(person.linkUrl)
+        ? `<a class="text-link" href="${escapeHtml(person.linkUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(person.linkText || 'Profile')} →</a>`
+       : '';
       return `
         <article class="card profile-card">
           <div class="profile-photo">
@@ -139,6 +142,8 @@ function renderLeadership() {
             <div class="role">${escapeHtml(person.role || '')}</div>
             <h3>${escapeHtml(person.name || '')}</h3>
             ${affiliation}${bio}
+            ${bio}
+            ${profileLink}
           </div>
         </article>`;
     }).join('');
