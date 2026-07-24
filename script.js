@@ -136,13 +136,8 @@ function renderLeadership() {
         : '';
 
       const profileLink = hasValue(person.linkUrl)
-        ? `<a class="text-link"
-             href="${escapeHtml(person.linkUrl)}"
-             target="_blank"
-             rel="noopener noreferrer">
-             ${escapeHtml(person.linkText || 'Profile')} →
-           </a>`
-        : '';
+        ? `<a class="text-link" href="${escapeHtml(person.linkUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(person.linkText || 'Profile')} →</a>`
+       : '';
 
       return `
         <article class="card profile-card">
@@ -178,7 +173,6 @@ function renderLeadership() {
     `).join('');
   }
 }
-
 
 // ----------------------------
 // Merchandise

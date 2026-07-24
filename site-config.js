@@ -187,7 +187,7 @@ window.BGSA_SITE = {
         affiliation: "",
         bio: "",
         linkText: "",
-        linkUrl: """
+        linkUrl: ""
       },
       {
         role: "Undergraduate Liaison",
