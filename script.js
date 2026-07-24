@@ -120,6 +120,7 @@ function renderLeadership() {
   document.querySelectorAll('[data-current-leadership-year]').forEach((el) => {
     el.textContent = leadership.currentYear || org.academicYear || '';
   });
+
   document.querySelectorAll('[data-previous-leadership-year]').forEach((el) => {
     el.textContent = leadership.previousYear || '';
   });
@@ -127,17 +128,35 @@ function renderLeadership() {
   if (currentMount && Array.isArray(leadership.current)) {
     currentMount.innerHTML = leadership.current.map((person) => {
       const affiliation = hasValue(person.affiliation)
-        ? `<p class="profile-affiliation">${escapeHtml(person.affiliation)}</p>` : '';
+        ? `<p class="profile-affiliation">${escapeHtml(person.affiliation)}</p>`
+        : '';
+
       const bio = hasValue(person.bio)
-        ? `<p class="profile-note">${escapeHtml(person.bio)}</p>` : '';
-        const profileLink = hasValue(person.linkUrl)
-        ? `<a class="text-link" href="${escapeHtml(person.linkUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(person.linkText || 'Profile')} →</a>`
-       : '';
+        ? `<p class="profile-note">${escapeHtml(person.bio)}</p>`
+        : '';
+
+      const profileLink = hasValue(person.linkUrl)
+        ? `<a class="text-link"
+             href="${escapeHtml(person.linkUrl)}"
+             target="_blank"
+             rel="noopener noreferrer">
+             ${escapeHtml(person.linkText || 'Profile')} →
+           </a>`
+        : '';
+
       return `
         <article class="card profile-card">
           <div class="profile-photo">
-            <img src="${escapeHtml(person.photo || 'assets/officer-placeholder.svg')}" alt="${escapeHtml(person.name || person.role || 'BGSA officer')}">
+            <img
+              src="${escapeHtml(
+                person.photo || 'assets/officer-placeholder.svg'
+              )}"
+              alt="${escapeHtml(
+                person.name || person.role || 'BGSA officer'
+              )}"
+            >
           </div>
+
           <div class="profile-body">
             <div class="role">${escapeHtml(person.role || '')}</div>
             <h3>${escapeHtml(person.name || '')}</h3>
@@ -145,9 +164,20 @@ function renderLeadership() {
             ${bio}
             ${profileLink}
           </div>
-        </article>`;
+        </article>
+      `;
     }).join('');
   }
+
+  if (previousMount && Array.isArray(leadership.previous)) {
+    previousMount.innerHTML = leadership.previous.map((person) => `
+      <div>
+        <strong>${escapeHtml(person.role || '')}</strong>
+        <span>${escapeHtml(person.name || '')}</span>
+      </div>
+    `).join('');
+  }
+}
 
   if (previousMount && Array.isArray(leadership.previous)) {
     previousMount.innerHTML = leadership.previous.map((person) => `
