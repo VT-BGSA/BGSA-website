@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="Placeholder for BGSA group photo">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9e4d2"/><stop offset="1" stop-color="#8eaa85"/></linearGradient></defs>
+<rect width="1200" height="700" fill="url(#g)"/>
+<g fill="#496047" opacity=".55"><circle cx="140" cy="120" r="145"/><circle cx="1050" cy="130" r="180"/><circle cx="880" cy="60" r="100"/></g>
+<rect y="500" width="1200" height="200" fill="#8c9d77"/>
+<g fill="#324638">
+  <g transform="translate(210 245)"><circle cx="0" cy="0" r="38"/><rect x="-43" y="38" width="86" height="145" rx="35"/></g>
+  <g transform="translate(330 225)"><circle cx="0" cy="0" r="42"/><rect x="-48" y="42" width="96" height="158" rx="38"/></g>
+  <g transform="translate(460 250)"><circle cx="0" cy="0" r="36"/><rect x="-41" y="36" width="82" height="140" rx="34"/></g>
+  <g transform="translate(580 218)"><circle cx="0" cy="0" r="44"/><rect x="-49" y="44" width="98" height="165" rx="40"/></g>
+  <g transform="translate(715 242)"><circle cx="0" cy="0" r="38"/><rect x="-43" y="38" width="86" height="147" rx="35"/></g>
+  <g transform="translate(835 226)"><circle cx="0" cy="0" r="42"/><rect x="-48" y="42" width="96" height="158" rx="38"/></g>
+  <g transform="translate(960 252)"><circle cx="0" cy="0" r="36"/><rect x="-41" y="36" width="82" height="140" rx="34"/></g>
+</g>
+<rect x="360" y="590" width="480" height="60" rx="12" fill="#ffffff" opacity=".9"/>
+<text x="600" y="628" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#5b1730">REPLACE WITH A BGSA GROUP PHOTO</text>
+</svg>

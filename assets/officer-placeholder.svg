@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Officer photo placeholder">
+<rect width="800" height="600" fill="#ece7e3"/>
+<circle cx="400" cy="215" r="105" fill="#b8aaa8"/>
+<path d="M205 560c20-145 105-220 195-220s175 75 195 220" fill="#9a878a"/>
+<text x="400" y="560" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#5b1730">ADD OFFICER PHOTO</text>
+</svg>

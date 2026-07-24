@@ -1,91 +1,77 @@
-# Biological Sciences Graduate Student Association at Virginia Tech — Starter Website
+# BGSA Website — Maintainable GitHub Pages Edition
 
-A simple static website designed for free hosting with GitHub Pages.
+Website for the **Biological Sciences Graduate Student Association at Virginia Tech**.
 
-## Pages
+## Designed for easy officer transitions
 
-- `index.html` — Home
-- `people.html` — Officer profiles
-- `events.html` — Events/calendar
-- `connect.html` — Contact and community links
-- `merch.html` — Merchandise catalog + support QR placeholder
-- `styles.css` — All styling
-- `script.js` — Mobile navigation + automatic copyright year
+Most routine content is controlled from one file:
 
-## What to edit first
+`site-config.js`
 
-Search the project files for these obvious placeholders:
+Future officers generally do not need to edit HTML to update:
 
-- `YOUR-BGSA-EMAIL@vt.edu`
-- `ADD OFFICER PHOTO`
-- `Officer Name`
-- `Program / Lab`
-- `ADD COMMUNITY INVITE LINK`
-- `ADD SOCIAL HANDLE`
-- `ADD GOOGLE FORM LINK`
-- `ADD T-SHIRT PHOTO`
-- `$XX`
-- `Google Calendar goes here`
+- leadership names, roles, photos, affiliations, or bios
+- organization contact information
+- homepage wording
+- merchandise
+- social/community links
+- the public Outlook calendar link
 
-## Add officer photos
+See `EDITING-GUIDE.md` for step-by-step instructions.
 
-1. Put image files in the `assets` folder, for example `assets/jane-smith.jpg`.
-2. In `people.html`, replace:
+## Events
 
-```html
-<div class="profile-photo">ADD OFFICER PHOTO</div>
+Events are managed in the shared BGSA Outlook/Microsoft 365 calendar.
+
+A scheduled GitHub Action reads the published Outlook ICS feed and updates:
+
+- the next three homepage events
+- the full Events-page agenda
+
+The published ICS URL is stored as the GitHub Actions repository secret:
+
+`OUTLOOK_ICS_URL`
+
+The public Outlook browser/HTML link can be entered in `site-config.js`.
+
+## Formal governance content
+
+The Bylaws page is kept as a static governance page rather than routine configuration content. The package includes the supplied bylaws document in `documents/`.
+
+## Main files
+
+- `site-config.js` — **main routine editing file**
+- `EDITING-GUIDE.md` — simple update instructions
+- `index.html` — homepage layout
+- `about.html` — About page
+- `events.html` — event agenda
+- `people.html` — leadership page generated from `site-config.js`
+- `bylaws.html` — formal bylaws page
+- `merch.html` — merchandise generated from `site-config.js`
+- `connect.html` — contact links generated from `site-config.js`
+- `styles.css` — design and responsive layout
+- `script.js` — generates dynamic site content
+- `.github/workflows/update-calendar.yml` — Outlook calendar sync
+- `tools/update_outlook_calendar.py` — ICS parser/sync tool
+
+## Publishing changes
+
+After editing locally:
+
+**GitHub Desktop → Commit to main → Push origin**
+
+GitHub Pages will republish automatically.
+## Optional event RSVPs
+
+The Outlook calendar integration supports optional Microsoft Forms RSVP buttons with no HTML editing.
+
+For an event that needs registration, put a standalone line in the Outlook event description:
+
+```text
+RSVP: https://forms.office.com/...
 ```
 
-with:
+The calendar sync extracts that link into `rsvpUrl`, removes the raw RSVP line from the displayed description, and the site automatically renders an **RSVP** button on the homepage and Events page. Events without that line have no RSVP button.
 
-```html
-<img class="profile-photo" src="assets/jane-smith.jpg" alt="Jane Smith">
-```
+A separate form is recommended only for events that actually need RSVPs; routine meetings and open events do not need one.
 
-## Embed a Google Calendar
-
-1. Create a shared BGSA Google Calendar.
-2. In Google Calendar settings, find the calendar's embed code.
-3. In `events.html`, replace the entire `calendar-placeholder` block with the Google `<iframe>` embed code.
-4. Add `style="border:0;width:100%;height:700px"` to the iframe if needed.
-
-## Add merchandise photos
-
-Put the photo in `assets`, then replace a merchandise placeholder such as:
-
-```html
-<div class="merch-image">ADD T-SHIRT PHOTO</div>
-```
-
-with:
-
-```html
-<img class="merch-image" src="assets/bgsa-shirt.jpg" alt="BGSA T-shirt">
-```
-
-## Add a donation/support QR code
-
-Only after BGSA confirms the appropriate organization-controlled payment/donation method:
-
-1. Save the QR image as `assets/support-qr.png`.
-2. In `merch.html`, replace the `qr-placeholder` block with:
-
-```html
-<img src="assets/support-qr.png" alt="QR code to support BGSA" style="max-width:300px;margin:auto">
-```
-
-## Publish free with GitHub Pages
-
-1. Create a GitHub repository, e.g. `bgsa-website`.
-2. Upload all files in this folder to the repository root.
-3. On GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and `/ (root)` folder, then save.
-6. GitHub will provide a free address similar to:
-   `https://YOUR-USERNAME.github.io/bgsa-website/`
-
-You can later connect a custom domain if desired.
-
-## Branding note
-
-The starter uses Virginia Tech's Chicago maroon (`#861F41`) and burnt orange (`#E87722`) color palette, but it does not include an official university logo or lockup. Before using official Virginia Tech trademarks, confirm the student organization's recognition/permissions and current university brand/licensing rules.

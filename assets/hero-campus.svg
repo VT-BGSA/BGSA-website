@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Stylized collegiate campus scene">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b68b94"/><stop offset="1" stop-color="#e6c8bd"/></linearGradient>
+  <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#807676"/><stop offset="1" stop-color="#4f4b4d"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<path d="M0 650 C230 580 370 600 520 660 C720 735 950 620 1150 650 C1330 680 1440 650 1600 610 L1600 900 L0 900Z" fill="#313437"/>
+<g opacity=".95">
+  <rect x="955" y="245" width="410" height="415" rx="3" fill="url(#stone)"/>
+  <rect x="1015" y="165" width="112" height="495" fill="#5b5557"/>
+  <rect x="1195" y="155" width="112" height="505" fill="#5b5557"/>
+  <path d="M1015 165 L1071 105 L1127 165Z" fill="#4a4547"/>
+  <path d="M1195 155 L1251 92 L1307 155Z" fill="#4a4547"/>
+  <path d="M1127 300 L1195 300 L1161 245Z" fill="#555052"/>
+  <g fill="#c5b7b1" opacity=".7">
+    <rect x="1042" y="220" width="22" height="65"/><rect x="1080" y="220" width="22" height="65"/>
+    <rect x="1222" y="210" width="22" height="65"/><rect x="1260" y="210" width="22" height="65"/>
+    <rect x="1028" y="355" width="28" height="70"/><rect x="1084" y="355" width="28" height="70"/>
+    <rect x="1210" y="345" width="28" height="70"/><rect x="1264" y="345" width="28" height="70"/>
+  </g>
+  <path d="M1116 660 V520 C1116 462 1204 462 1204 520 V660Z" fill="#302b2d"/>
+  <path d="M1138 660 V536 C1138 506 1182 506 1182 536 V660Z" fill="#151315"/>
+</g>
+<g fill="#222a27" opacity=".93">
+  <circle cx="930" cy="560" r="120"/><circle cx="870" cy="610" r="95"/><circle cx="1420" cy="520" r="140"/><circle cx="1520" cy="600" r="115"/>
+</g>
+<path d="M690 900 L1045 660 L1280 660 L1550 900Z" fill="#7a7372" opacity=".48"/>
+</svg>

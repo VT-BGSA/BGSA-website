@@ -1,0 +1,43 @@
+name: Update Outlook calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Refresh every 30 minutes. GitHub schedules use UTC and may be delayed
+    # during periods of high Actions load.
+    - cron: "17,47 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-events:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install calendar parser
+        run: python -m pip install --disable-pip-version-check icalendar recurring-ical-events
+
+      - name: Build website event data
+        env:
+          OUTLOOK_ICS_URL: ${{ secrets.OUTLOOK_ICS_URL }}
+        run: python tools/update_outlook_calendar.py
+
+      - name: Commit updated events when needed
+        run: |
+          if git diff --quiet -- data/events.json; then
+            echo "No calendar changes detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json
+          git commit -m "Update Outlook calendar events"
+          git push
