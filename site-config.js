@@ -113,63 +113,81 @@ window.BGSA_SITE = {
         name: "Michael Beall",
         photo: "assets/leader-01.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
       },
       {
         role: "Vice President",
         name: "Benedicta Ottairoegbu",
         photo: "assets/leader-02.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
       },
       {
         role: "Treasurer",
         name: "Daria Smith",
         photo: "assets/leader-03.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
       },
       {
         role: "Secretary",
         name: "Emma White",
         photo: "assets/leader-04.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
       },
    {
         role: "GPSS Senator",
       name: "Sharat Paka",
       photo: "assets/sharat-paka.jpg",
       affiliation: "",
-      bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
     },
     {
         role: "GPSS Senator",
       name: "Sehasree Mohanta",
-      photo: "assets/sehasree-mohanta.jpg",
+      photo: "assets/sehasree-mohanta.png",
       affiliation: "",
-      bio: ""
+        bio: "Sehasree Mohanta is a Ph.D. student in the Department of Biological Sciences in the MCB Graduate Program at Virginia Tech, working in Dr. Iulia M. Lazar's laboratory. Her research focuses on cancer-derived extracellular vesicles, proteomics, and biomarker discovery, with a particular interest in cancer biology and mass spectrometry–based approaches. Outside the lab, she enjoys science communication, traveling, and practicing Indian classical dance.",
+        linkText: "LinkedIn",
+        linkUrl: "https://www.linkedin.com/in/sehasree-mohanta-aaa306202/"
     },
       {
         role: "Professional Development Chair",
         name: "Breanna Wimbush",
         photo: "assets/leader-06.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
       },
       {
         role: "Social Chair",
         name: "Juan-Carlos Mungarary",
         photo: "assets/leader-07.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: ""
       },
       {
         role: "Outreach Chair",
         name: "Jay Margolis",
         photo: "assets/leader-08.svg",
         affiliation: "",
-        bio: ""
+        bio: "",
+        linkText: "",
+        linkUrl: """
       },
       {
         role: "Undergraduate Liaison",
