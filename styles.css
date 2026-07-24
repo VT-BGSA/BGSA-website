@@ -142,7 +142,7 @@ button,input,textarea{font:inherit}
 /* People */
 .profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .profile-card{padding:0;overflow:hidden}
-.profile-photo{aspect-ratio:4/3;background:#ece7e3;overflow:hidden}
+.profile-photo{aspect-ratio:3/4;background:#ece7e3;overflow:hidden}
 .profile-photo img{width:100%;height:100%;object-fit:cover}
 .profile-body{padding:22px}
 .role{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--orange);font-weight:900}
@@ -158,7 +158,7 @@ button,input,textarea{font:inherit}
 /* Merch */
 .merch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .merch-card{padding:0;overflow:hidden}
-.merch-image{aspect-ratio:4/3;background:#efe9e5;overflow:hidden}
+.merch-image{aspect-ratio:3/4;background:#efe9e5;overflow:hidden}
 .merch-image img{width:100%;height:100%;object-fit:cover}
 .merch-body{padding:24px}
 .price{font-family:Impact,"Arial Narrow",sans-serif;color:var(--orange);font-size:2rem}
