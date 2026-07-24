@@ -136,13 +136,20 @@ window.BGSA_SITE = {
         affiliation: "",
         bio: ""
       },
-      {
-        role: "GPSS Delegates #1 & #2",
-        name: "Sharat Paka & Sehasree Mohanta",
-        photo: "assets/leader-05.svg",
-        affiliation: "",
-        bio: ""
-      },
+   {
+        role: "GPSS Senator",
+      name: "Sharat Paka",
+      photo: "assets/sharat-paka.jpg",
+      affiliation: "",
+      bio: ""
+    },
+    {
+        role: "GPSS Senator",
+      name: "Sehasree Mohanta",
+      photo: "assets/sehasree-mohanta.jpg",
+      affiliation: "",
+      bio: ""
+    },
       {
         role: "Professional Development Chair",
         name: "Breanna Wimbush",
