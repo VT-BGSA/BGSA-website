@@ -281,6 +281,283 @@ function renderAgendaItem(event) {
     </article>`;
 }
 
+// ----------------------------
+// Monthly events calendar
+// ----------------------------
+let calendarViewYear = null;
+let calendarViewMonth = null;
+let calendarEvents = [];
+
+function getDatePartsInDisplayTimeZone(date) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: displayTimeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).formatToParts(date);
+
+  const values = Object.fromEntries(
+    parts
+      .filter((part) => part.type !== 'literal')
+      .map((part) => [part.type, part.value])
+  );
+
+  return {
+    year: Number(values.year),
+    month: Number(values.month) - 1,
+    day: Number(values.day)
+  };
+}
+
+function makeDateKey(year, month, day) {
+  return `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+}
+
+function getEventDateKey(event) {
+  if (!event?.start) return '';
+
+  // All-day Outlook events normally use a YYYY-MM-DD date.
+  if (event.allDay) {
+    return String(event.start).slice(0, 10);
+  }
+
+  const date = new Date(event.start);
+
+  if (Number.isNaN(date.getTime())) {
+    return '';
+  }
+
+  const parts = getDatePartsInDisplayTimeZone(date);
+
+  return makeDateKey(
+    parts.year,
+    parts.month,
+    parts.day
+  );
+}
+
+function renderMonthEvent(event) {
+  const { time } = eventDateParts(event);
+  const title = escapeHtml(event.title || 'BGSA Event');
+
+  const eventUrl = hasValue(event.url)
+    ? escapeHtml(event.url)
+    : '#events-agenda';
+
+  const externalAttributes = eventUrl !== '#events-agenda'
+    ? ' target="_blank" rel="noopener noreferrer"'
+    : '';
+
+  return `
+    <a
+      class="month-calendar-event"
+      href="${eventUrl}"
+      ${externalAttributes}
+    >
+      <span class="month-calendar-event-time">
+        ${escapeHtml(time)}
+      </span>
+
+      <span class="month-calendar-event-title">
+        ${title}
+      </span>
+    </a>
+  `;
+}
+
+function renderMonthCalendar() {
+  const mount = document.querySelector('#events-calendar');
+  const label = document.querySelector('#calendar-month-label');
+
+  if (
+    !mount ||
+    calendarViewYear === null ||
+    calendarViewMonth === null
+  ) {
+    return;
+  }
+
+  const monthName = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    year: 'numeric'
+  }).format(
+    new Date(calendarViewYear, calendarViewMonth, 1)
+  );
+
+  if (label) {
+    label.textContent = monthName;
+  }
+
+  mount.setAttribute(
+    'aria-label',
+    `${monthName} BGSA events calendar`
+  );
+
+  const firstWeekday = new Date(
+    calendarViewYear,
+    calendarViewMonth,
+    1
+  ).getDay();
+
+  const daysInMonth = new Date(
+    calendarViewYear,
+    calendarViewMonth + 1,
+    0
+  ).getDate();
+
+  const totalCells =
+    Math.ceil((firstWeekday + daysInMonth) / 7) * 7;
+
+  const todayParts =
+    getDatePartsInDisplayTimeZone(new Date());
+
+  const todayKey = makeDateKey(
+    todayParts.year,
+    todayParts.month,
+    todayParts.day
+  );
+
+  const eventsByDay = new Map();
+
+  calendarEvents.forEach((event) => {
+    const dateKey = getEventDateKey(event);
+
+    if (!dateKey) return;
+
+    if (!eventsByDay.has(dateKey)) {
+      eventsByDay.set(dateKey, []);
+    }
+
+    eventsByDay.get(dateKey).push(event);
+  });
+
+  // Keep multiple events on the same day in chronological order.
+  eventsByDay.forEach((events) => {
+    events.sort((first, second) => {
+      return new Date(first.start) - new Date(second.start);
+    });
+  });
+
+  const cells = [];
+
+  for (let cell = 0; cell < totalCells; cell += 1) {
+    const day = cell - firstWeekday + 1;
+
+    if (day < 1 || day > daysInMonth) {
+      cells.push(`
+        <div
+          class="month-calendar-day is-empty"
+          aria-hidden="true"
+        ></div>
+      `);
+
+      continue;
+    }
+
+    const dateKey = makeDateKey(
+      calendarViewYear,
+      calendarViewMonth,
+      day
+    );
+
+    const dayEvents = eventsByDay.get(dateKey) || [];
+
+    // Show up to three event labels in a calendar square.
+    const visibleEvents = dayEvents.slice(0, 3);
+    const moreCount = dayEvents.length - visibleEvents.length;
+
+    const todayClass =
+      dateKey === todayKey ? ' is-today' : '';
+
+    cells.push(`
+      <div
+        class="month-calendar-day${todayClass}"
+        role="gridcell"
+      >
+        <div class="month-calendar-day-number">
+          ${day}
+        </div>
+
+        <div class="month-calendar-day-events">
+          ${visibleEvents.map(renderMonthEvent).join('')}
+
+          ${
+            moreCount > 0
+              ? `<a class="month-calendar-more" href="#events-agenda">+${moreCount} more</a>`
+              : ''
+          }
+        </div>
+      </div>
+    `);
+  }
+
+  mount.innerHTML = cells.join('');
+}
+
+function moveCalendarMonth(amount) {
+  const newMonth = new Date(
+    calendarViewYear,
+    calendarViewMonth + amount,
+    1
+  );
+
+  calendarViewYear = newMonth.getFullYear();
+  calendarViewMonth = newMonth.getMonth();
+
+  renderMonthCalendar();
+}
+
+function initializeEventCalendar(events) {
+  calendarEvents = Array.isArray(events)
+    ? events
+    : [];
+
+  if (
+    calendarViewYear === null ||
+    calendarViewMonth === null
+  ) {
+    const today =
+      getDatePartsInDisplayTimeZone(new Date());
+
+    calendarViewYear = today.year;
+    calendarViewMonth = today.month;
+  }
+
+  const previousButton =
+    document.querySelector('#calendar-prev');
+
+  const nextButton =
+    document.querySelector('#calendar-next');
+
+  const todayButton =
+    document.querySelector('#calendar-today');
+
+  if (previousButton) {
+    previousButton.onclick = () => {
+      moveCalendarMonth(-1);
+    };
+  }
+
+  if (nextButton) {
+    nextButton.onclick = () => {
+      moveCalendarMonth(1);
+    };
+  }
+
+  if (todayButton) {
+    todayButton.onclick = () => {
+      const today =
+        getDatePartsInDisplayTimeZone(new Date());
+
+      calendarViewYear = today.year;
+      calendarViewMonth = today.month;
+
+      renderMonthCalendar();
+    };
+  }
+
+  renderMonthCalendar();
+}
 function setCalendarStatus(selector, heading, detail) {
   const mount = document.querySelector(selector);
   if (!mount) return;
@@ -292,27 +569,107 @@ function setCalendarStatus(selector, heading, detail) {
 }
 
 async function loadCalendarEvents() {
-  const upcomingMount = document.querySelector('#upcoming-events');
-  const agendaMount = document.querySelector('#events-agenda');
-  if (!upcomingMount && !agendaMount) return;
-  try {
-    const response = await fetch(`data/events.json?ts=${Date.now()}`, { cache: 'no-store' });
-    if (!response.ok) throw new Error(`Event data returned ${response.status}`);
-    const data = await response.json();
-    const events = Array.isArray(data.events) ? data.events : [];
+  const upcomingMount =
+    document.querySelector('#upcoming-events');
 
-    if (upcomingMount) {
-      if (events.length) upcomingMount.innerHTML = events.slice(0, 3).map(renderEventCard).join('');
-      else setCalendarStatus('#upcoming-events', 'No upcoming events posted yet', 'New BGSA events will appear here automatically after the Outlook calendar is connected.');
+  const agendaMount =
+    document.querySelector('#events-agenda');
+
+  const calendarMount =
+    document.querySelector('#events-calendar');
+
+  if (
+    !upcomingMount &&
+    !agendaMount &&
+    !calendarMount
+  ) {
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `data/events.json?ts=${Date.now()}`,
+      {
+        cache: 'no-store'
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `Event data returned ${response.status}`
+      );
     }
+
+    const data = await response.json();
+
+    const events = Array.isArray(data.events)
+      ? data.events
+      : [];
+
+    // Homepage: show only the next three events.
+    if (upcomingMount) {
+      if (events.length) {
+        upcomingMount.innerHTML = events
+          .slice(0, 3)
+          .map(renderEventCard)
+          .join('');
+      } else {
+        setCalendarStatus(
+          '#upcoming-events',
+          'No upcoming events posted yet',
+          'New BGSA events will appear here automatically after the Outlook calendar is connected.'
+        );
+      }
+    }
+
+    // Events page: show a navigable month calendar.
+    if (calendarMount) {
+      initializeEventCalendar(events);
+    }
+
+    // Events page: show complete event information.
     if (agendaMount) {
-      if (events.length) agendaMount.innerHTML = events.map(renderAgendaItem).join('');
-      else setCalendarStatus('#events-agenda', 'No upcoming events posted yet', 'New events will appear here automatically from the shared BGSA Outlook calendar.');
+      if (events.length) {
+        agendaMount.innerHTML = events
+          .map(renderAgendaItem)
+          .join('');
+      } else {
+        setCalendarStatus(
+          '#events-agenda',
+          'No upcoming events posted yet',
+          'New events will appear here automatically from the shared BGSA Outlook calendar.'
+        );
+      }
     }
   } catch (error) {
-    console.error('Unable to load BGSA Outlook calendar events:', error);
-    if (upcomingMount) setCalendarStatus('#upcoming-events', 'Upcoming events are temporarily unavailable', 'Please check the Events page or BGSA calendar.');
-    if (agendaMount) setCalendarStatus('#events-agenda', 'Calendar temporarily unavailable', 'Please try again shortly.');
+    console.error(
+      'Unable to load BGSA Outlook calendar events:',
+      error
+    );
+
+    if (upcomingMount) {
+      setCalendarStatus(
+        '#upcoming-events',
+        'Upcoming events are temporarily unavailable',
+        'Please check the Events page or BGSA calendar.'
+      );
+    }
+
+    if (calendarMount) {
+      calendarMount.innerHTML = `
+        <div class="month-calendar-message">
+          The monthly calendar is temporarily unavailable.
+        </div>
+      `;
+    }
+
+    if (agendaMount) {
+      setCalendarStatus(
+        '#events-agenda',
+        'Calendar temporarily unavailable',
+        'Please try again shortly.'
+      );
+    }
   }
 }
 
