@@ -149,9 +149,9 @@ window.BGSA_SITE = {
       name: "Sharat Paka",
       photo: "assets/sharat-paka.jpg",
       affiliation: "",
-        bio: "",
-        linkText: "",
-        linkUrl: ""
+        bio: "My name is Sharat and I am from Virginia; I am currently working towards a PhD in the Scharf lab studying novel factors that play roles in cellular motility. Some of my hobbies outside lab include hiking, working on cars riding motorcycles, photography, and video games! I am excited to help serve you as a member of the BGSA!",
+        linkText: "LinkedIn",
+        linkUrl: "www.linkedin.com/in/sharatpaka"
     },
     {
         role: "GPSS Senator",
@@ -192,9 +192,9 @@ window.BGSA_SITE = {
       {
         role: "Undergraduate Liaison",
         name: "Sophia Smith",
-        photo: "assets/leader-09.svg",
+        photo: "assets/leader-09.jpeg",
         affiliation: "",
-        bio: "",
+        bio: "Sophia Smith is a 3rd year Ph.D. student in Dr. Kendra Sewall’s lab, studying the effects of urbanization on the aggression and neuroendocrine profiles of song sparrows. As the Undergraduate Liaison, Sophia is eager to connect undergraduate students with research labs at VT, introducing hands-on opportunities to the next generation of scientists.",
         linkText: "",
         linkUrl: ""
       }
