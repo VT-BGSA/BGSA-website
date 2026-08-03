@@ -675,11 +675,17 @@ async function loadCalendarEvents() {
 
 function configureOutlookCalendarLink() {
   const link = document.querySelector('#outlook-calendar-link');
+
   if (!link) return;
+
   const url = (site.links || {}).publicOutlookCalendar;
+
   if (hasValue(url)) {
     link.href = url.trim();
     link.hidden = false;
+  } else {
+    link.hidden = true;
+    link.removeAttribute('href');
   }
 }
 

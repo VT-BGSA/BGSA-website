@@ -475,3 +475,7 @@ button,input,textarea{font:inherit}
     font-size: 0.74rem;
   }
 }
+
+[hidden] {
+  display: none !important;
+}
