@@ -192,7 +192,7 @@ window.BGSA_SITE = {
       {
         role: "Undergraduate Liaison",
         name: "Sophia Smith",
-        photo: "assets/leader-09.jpeg",
+        photo: "assets/leader-09.jpg",
         affiliation: "",
         bio: "Sophia Smith is a 3rd year Ph.D. student in Dr. Kendra Sewall’s lab, studying the effects of urbanization on the aggression and neuroendocrine profiles of song sparrows. As the Undergraduate Liaison, Sophia is eager to connect undergraduate students with research labs at VT, introducing hands-on opportunities to the next generation of scientists.",
         linkText: "",
