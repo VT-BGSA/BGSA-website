@@ -111,9 +111,9 @@ window.BGSA_SITE = {
       {
         role: "President",
         name: "Michael Beall",
-        photo: "assets/leader-01.svg",
+        photo: "assets/leader-01.png",
         affiliation: "",
-        bio: "",
+        bio: "Michael is a third-year Ph.D. student in the Hotchkiss Lab. His research uses ecosystem models to investigate how stream metabolism responds to storm disturbances. As BGSA president, he aims to strengthen the graduate student community, expand professional development opportunities, and advocate for students’ needs and interests. In his free time, he enjoys hiking, photography, playing music, cooking, and weightlifting.",
         linkText: "",
         linkUrl: ""
       },
