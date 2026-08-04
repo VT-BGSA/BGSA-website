@@ -138,9 +138,9 @@ window.BGSA_SITE = {
       {
         role: "Secretary",
         name: "Emma White",
-        photo: "assets/leader-04.svg",
+        photo: "assets/leader-04.jpg",
         affiliation: "",
-        bio: "",
+        bio: "I am a second-year PhD student in the McGlothlin lab at Virginia Tech. I study the evolutionary ecology and thermal physiology of reptiles.",
         linkText: "",
         linkUrl: ""
       },
