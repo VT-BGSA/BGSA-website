@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T12:08:03.001062+00:00",
+  "generatedAt": "2026-08-04T21:55:01.041090+00:00",
   "events": [
     {
       "title": "Idella Collet's MSc Defense",
@@ -27,6 +27,16 @@
       "end": "2026-08-14T20:00:00-04:00",
       "allDay": false,
       "location": "Maroon Door",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "First Day of  Classes",
+      "start": "2026-08-24",
+      "end": "2026-08-25",
+      "allDay": true,
+      "location": "",
       "description": "",
       "url": "",
       "rsvpUrl": ""
