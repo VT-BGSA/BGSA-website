@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-08-03T12:51:51.599905+00:00",
+  "generatedAt": "2026-08-04T12:06:00.640731+00:00",
   "events": [
+    {
+      "title": "Idella Collet's MSc Defense",
+      "start": "2026-08-10T10:00:00-04:00",
+      "end": "2026-08-10T11:00:00-04:00",
+      "allDay": false,
+      "location": "Life Sciences 1;  Room 101",
+      "description": "Join Zoom Meeting: https://virginiatech.zoom.us/j/85164636989<https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fvirginiatech.zoom.us%2Fj%2F85164636989&data=05%7C02%7Cmcb2370%40vt.edu%7C0105c83d0ba94f12380108def19588ab%7C6095688410ad40fa863d4f32c1e3a37a%7C0%7C0%7C639213821710544904%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=4%2Fbq2baUUtvpoDXlx1UKLxjqrvgxDAkCq0zmnKbj7A8%3D&reserved=0>",
+      "url": "",
+      "rsvpUrl": ""
+    },
     {
       "title": "BioSci Graduate Student Orientation",
       "start": "2026-08-13",
