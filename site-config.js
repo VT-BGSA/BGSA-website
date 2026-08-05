@@ -29,7 +29,7 @@ window.BGSA_SITE = {
     academicYear: "2026–2027",
 
     // Leave blank until you have an organization-controlled email.
-    email: "",
+    email: "bgsa@vt.edu",
 
     // Optional: use a separate treasurer email. If blank, the main BGSA email is used.
     treasurerEmail: "",
