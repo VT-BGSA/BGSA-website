@@ -120,7 +120,7 @@ window.BGSA_SITE = {
       {
         role: "Vice President",
         name: "Benedicta Ottairoegbu",
-        photo: "assets/leader-02.JPEG",
+        photo: "assets/leader-02.jpeg",
         affiliation: "",
         bio: "I am a third-year PhD student in the Whitehead Lab focusing on how biodiversity ad plant-biotic interactions can be leveraged to improve crop health, fruit quality and ecosystem sustainability.  As Vice President, I am committed to fostering an inclusive and supportive community by promoting collaboration, professional development, and meaningful engagement among members to strengthen the graduate student experience. Outside of research, I enjoy organizing events and cooking.",
         linkText: "",
