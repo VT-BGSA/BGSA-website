@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-08-10T15:15:25.286960+00:00",
+  "generatedAt": "2026-08-11T12:18:24.049116+00:00",
   "events": [
+    {
+      "title": "Mychala Snead's PhD Defense",
+      "start": "2026-08-12T12:00:00-04:00",
+      "end": "2026-08-12T13:00:00-04:00",
+      "allDay": false,
+      "location": "Steger Auditorium Room 145",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
     {
       "title": "BioSci Graduate Student Orientation",
       "start": "2026-08-13T21:00:00-04:00",
