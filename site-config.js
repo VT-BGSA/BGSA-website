@@ -183,11 +183,11 @@ window.BGSA_SITE = {
       {
         role: "Outreach Chair",
         name: "Jay Margolis",
-        photo: "assets/leader-08.svg",
+        photo: "assets/leader-08.jpeg",
         affiliation: "",
-        bio: "",
-        linkText: "",
-        linkUrl: ""
+        bio: "Jay is a fifth-year PhD candidate in Dr. Ignacio Moore's lab, where they research the evolution of bird color. Specifically, they are looking at the potential influences of bird behavior and life history traits on the development of sexual dichromatism in a species. Their research includes investigating ultraviolet coloration in owls, as well as potential correlations between the degree of ultraviolet coloration and behaviors within Strigidae (typical owl) species. Jay is an avid artist and uses their skills in art and design, as well as museum work prior to starting their PhD, to effectively communicate science. ",
+        linkText: "LinkedIn",
+        linkUrl: "https://www.linkedin.com/in/jay-margolis-587846174/"
       },
       {
         role: "Undergraduate Liaison",
