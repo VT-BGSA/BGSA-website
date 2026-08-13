@@ -129,9 +129,9 @@ window.BGSA_SITE = {
       {
         role: "Treasurer",
         name: "Daria Smith",
-        photo: "assets/leader-03.svg",
+        photo: "assets/leader-03.jpg",
         affiliation: "",
-        bio: "",
+        bio: "Daria Smith is a second-year Ph.D. student in the Igwe Lab. Her research centers on how urban environmental stressors alter interactions between plants and microorganisms and influence their function. As treasurer, her goal is to help create an interactive space that supports the needs of graduate students. In her free time, she enjoys watching reality TV, taking walks, and trying new restaurants.",
         linkText: "",
         linkUrl: ""
       },
