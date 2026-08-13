@@ -165,9 +165,9 @@ window.BGSA_SITE = {
       {
         role: "Professional Development Chair",
         name: "Breanna Wimbush",
-        photo: "assets/leader-06.svg",
+        photo: "assets/leader-06.jpg",
         affiliation: "",
-        bio: "",
+        bio: "Breanna is a PhD student in the Lam Lab. The Lam Lab studies an emerging, opportunistic pathogen called Achromobacter xylosoxidans (Ax). Ax as a species is genetically and phenotypically diverse, which can be seen through the lab’s several clinical isolates. Breanna’s main goal is to identify and characterize these genotypic and phenotypic differences within the species through developing in vivomodels. Outside of the lab she enjoys volleyball, air hockey, baking, and board games. As professional development chair I hope to connect students with opportunities and resources that support their growth as scientists. ",
         linkText: "",
         linkUrl: ""
       },
