@@ -174,9 +174,9 @@ window.BGSA_SITE = {
       {
         role: "Social Chair",
         name: "Juan-Carlos Mungarary",
-        photo: "assets/leader-07.svg",
+        photo: "assets/leader-07.jpg",
         affiliation: "",
-        bio: "",
+        bio: "My name is Juan-Carlos Mungaray. I am a second-year PhD student in the Belden lab, studying interactions between helminth infections and the gut microbiome of host salamanders. I am excited to serve as the social chair for the BGSA!",
         linkText: "",
         linkUrl: ""
       },
