@@ -79,6 +79,34 @@ function bindSimpleContent() {
   });
 }
 
+
+// ----------------------------
+// Resources navigation
+// ----------------------------
+// Adds the Resources tab to existing pages without requiring the navigation
+// markup to be edited separately in every HTML file.
+function configureResourcesNav() {
+  document.querySelectorAll('.nav-links').forEach((nav) => {
+    // Avoid creating a duplicate if a page already includes the link.
+    if (nav.querySelector('a[href="resources.html"]')) return;
+
+    const link = document.createElement('a');
+    link.href = 'resources.html';
+    link.textContent = 'Resources';
+
+    const currentPage =
+      window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+
+    if (currentPage === 'resources.html') {
+      link.setAttribute('aria-current', 'page');
+    }
+
+    // Place Resources between People and Bylaws when possible.
+    const bylawsLink = nav.querySelector('a[href="bylaws.html"]');
+    nav.insertBefore(link, bylawsLink || null);
+  });
+}
+
 // ----------------------------
 // Homepage sections
 // ----------------------------
@@ -675,21 +703,16 @@ async function loadCalendarEvents() {
 
 function configureOutlookCalendarLink() {
   const link = document.querySelector('#outlook-calendar-link');
-
   if (!link) return;
-
   const url = (site.links || {}).publicOutlookCalendar;
-
   if (hasValue(url)) {
     link.href = url.trim();
     link.hidden = false;
-  } else {
-    link.hidden = true;
-    link.removeAttribute('href');
   }
 }
 
 bindSimpleContent();
+configureResourcesNav();
 renderFocusAreas();
 configureHomepagePhoto();
 renderLeadership();
