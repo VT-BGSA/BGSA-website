@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T01:48:29.492752+00:00",
+  "generatedAt": "2026-08-22T11:37:39.411915+00:00",
   "events": [
     {
       "title": "First Day of  Classes",
@@ -10,6 +10,36 @@
       "description": "",
       "url": "",
       "rsvpUrl": ""
+    },
+    {
+      "title": "BGSA - General Body Meeting",
+      "start": "2026-09-03T17:00:00-04:00",
+      "end": "2026-09-03T18:00:00-04:00",
+      "allDay": false,
+      "location": "Derring 2084",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "BioBeers Happy Hour",
+      "start": "2026-09-11T17:00:00-04:00",
+      "end": "2026-09-11T19:00:00-04:00",
+      "allDay": false,
+      "location": "",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "BGSA Fall Picnic",
+      "start": "2026-09-25T17:00:00-04:00",
+      "end": "2026-09-25T20:00:00-04:00",
+      "allDay": false,
+      "location": "Blacksburg Municipal Park Shelter #1 37.24147, -80.41424",
+      "description": "",
+      "url": "",
+      "rsvpUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjerFtmBKMo_xGh6mcQlDQ2qVUNkFOVElTUklNNFA4UjhSQ0dCOVRLR0s3Sy4u"
     }
   ]
 }
