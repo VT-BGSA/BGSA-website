@@ -279,6 +279,7 @@ function renderEventCard(event) {
   const url = hasValue(event.url) ? escapeHtml(event.url) : 'events.html';
   const target = url === 'events.html' ? '' : ' target="_blank" rel="noopener"';
   const rsvpUrl = hasValue(event.rsvpUrl) ? escapeHtml(event.rsvpUrl) : '';
+  const flyerUrl = hasValue(event.flyerUrl) ? escapeHtml(event.flyerUrl) : '';
   return `
     <article class="event-card">
       <div class="event-date"><span class="month">${month}</span><span class="day">${day}</span></div>
@@ -297,6 +298,7 @@ function renderAgendaItem(event) {
   const description = escapeHtml(event.description || '');
   const url = hasValue(event.url) ? escapeHtml(event.url) : '';
   const rsvpUrl = hasValue(event.rsvpUrl) ? escapeHtml(event.rsvpUrl) : '';
+  const flyerUrl = hasValue(event.flyerUrl) ? escapeHtml(event.flyerUrl) : '';
   return `
     <article class="agenda-item">
       <div class="agenda-date" aria-label="${escapeHtml(fullDate)}"><span class="month">${month}</span><span class="day">${day}</span></div>
@@ -304,9 +306,47 @@ function renderAgendaItem(event) {
         <div class="agenda-date-line">${escapeHtml(fullDate)} · ${escapeHtml(time)}</div>
         <h3>${title}</h3><div class="agenda-location">${location}</div>
         ${description ? `<p>${description}</p>` : ''}
-        ${(rsvpUrl || url) ? `<div class="agenda-actions">${rsvpUrl ? `<a class="button mini orange" href="${rsvpUrl}" target="_blank" rel="noopener">RSVP</a>` : ''}${url ? `<a class="button mini outline" href="${url}" target="_blank" rel="noopener">Event details</a>` : ''}</div>` : ''}
+${(rsvpUrl || flyerUrl || url) ? `
+  <div class="agenda-actions">
+
+    ${rsvpUrl ? `
+      <a
+        class="button mini orange"
+        href="${rsvpUrl}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        RSVP
+      </a>
+    ` : ''}
+
+    ${flyerUrl ? `
+      <a
+        class="button mini outline"
+        href="${flyerUrl}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Flyer
+      </a>
+    ` : ''}
+
+    ${url ? `
+      <a
+        class="button mini outline"
+        href="${url}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Event details
+      </a>
+    ` : ''}
+
+  </div>
+` : ''}
       </div>
-    </article>`;
+    </article>
+  `;
 }
 
 // ----------------------------
