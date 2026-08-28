@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-25T15:03:30.131821+00:00",
+  "generatedAt": "2026-08-28T00:01:51.827930+00:00",
   "events": [
     {
       "title": "BioBeers Happy Hour",
       "start": "2026-08-28T17:00:00-04:00",
       "end": "2026-08-28T19:00:00-04:00",
       "allDay": false,
-      "location": "",
+      "location": "Square 5 Public House (112 N Main St, Blacksburg, VA 24060, United States)",
       "description": "",
       "url": "",
       "rsvpUrl": ""
@@ -37,9 +37,9 @@
       "end": "2026-09-25T20:00:00-04:00",
       "allDay": false,
       "location": "Blacksburg Municipal Park Shelter #1 37.24147, -80.41424",
-      "description": "",
+      "description": "RSVP: <https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjerFtmBKMo_xGh6mcQlDQ2qVUNkFOVElTUklNNFA4UjhSQ0dCOVRLR0s3Sy4u> https://forms.cloud.microsoft/pages/responsepage.aspx?id=hGiVYK0Q-kCGPU8yweOjetYPYvi6qNZIrpF1CL5GRctUNlJITjZXSTI3WUFPMFAySUY5OE44MVZUTS4u&route=shorturl",
       "url": "",
-      "rsvpUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjerFtmBKMo_xGh6mcQlDQ2qVUNkFOVElTUklNNFA4UjhSQ0dCOVRLR0s3Sy4u"
+      "rsvpUrl": ""
     }
   ]
 }
