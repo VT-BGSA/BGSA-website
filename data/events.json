@@ -1,16 +1,6 @@
 {
-  "generatedAt": "2026-08-28T14:20:25.126374+00:00",
+  "generatedAt": "2026-08-29T03:22:24.910032+00:00",
   "events": [
-    {
-      "title": "BioBeers Happy Hour",
-      "start": "2026-08-28T17:00:00-04:00",
-      "end": "2026-08-28T19:00:00-04:00",
-      "allDay": false,
-      "location": "Square 5 Public House (112 N Main St, Blacksburg, VA 24060, United States)",
-      "description": "",
-      "url": "",
-      "rsvpUrl": ""
-    },
     {
       "title": "Writing Group",
       "start": "2026-09-01T13:00:00-04:00",
