@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-29T22:13:11.871869+00:00",
+  "generatedAt": "2026-08-31T13:20:53.554062+00:00",
   "events": [
     {
       "title": "Writing Group",
-      "start": "2026-09-01T13:00:00-04:00",
-      "end": "2026-09-01T16:00:00-04:00",
+      "start": "2026-08-31T13:00:00-04:00",
+      "end": "2026-08-31T16:00:00-04:00",
       "allDay": false,
       "location": "Virginia Tech Inn Hucklebarry room",
       "description": "",
@@ -32,6 +32,16 @@
       "rsvpUrl": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjerFtmBKMo_xGh6mcQlDQ2qVUM0M0T04zVEpTS0RVTkNSWDBRTkVaV1lDQS4u"
     },
     {
+      "title": "Writing Group",
+      "start": "2026-09-07T13:00:00-04:00",
+      "end": "2026-09-07T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
       "title": "Dexter Howard's PhD Defense",
       "start": "2026-09-11T10:30:00-04:00",
       "end": "2026-09-11T11:30:00-04:00",
@@ -42,12 +52,102 @@
       "rsvpUrl": ""
     },
     {
+      "title": "Writing Group",
+      "start": "2026-09-14T13:00:00-04:00",
+      "end": "2026-09-14T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-09-21T13:00:00-04:00",
+      "end": "2026-09-21T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
       "title": "BGSA Fall Picnic",
       "start": "2026-09-25T17:00:00-04:00",
       "end": "2026-09-25T20:00:00-04:00",
       "allDay": false,
       "location": "Blacksburg Municipal Park Shelter #1 37.24147, -80.41424",
-      "description": "RSVP: <https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hGiVYK0Q-kCGPU8yweOjerFtmBKMo_xGh6mcQlDQ2qVUNkFOVElTUklNNFA4UjhSQ0dCOVRLR0s3Sy4u> https://forms.cloud.microsoft/pages/responsepage.aspx?id=hGiVYK0Q-kCGPU8yweOjetYPYvi6qNZIrpF1CL5GRctUNlJITjZXSTI3WUFPMFAySUY5OE44MVZUTS4u&route=shorturl",
+      "description": "",
+      "url": "",
+      "rsvpUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=hGiVYK0Q-kCGPU8yweOjetYPYvi6qNZIrpF1CL5GRctUNlJITjZXSTI3WUFPMFAySUY5OE44MVZUTS4u&route=shorturl"
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-09-28T13:00:00-04:00",
+      "end": "2026-09-28T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-10-05T13:00:00-04:00",
+      "end": "2026-10-05T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-10-12T13:00:00-04:00",
+      "end": "2026-10-12T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-10-19T13:00:00-04:00",
+      "end": "2026-10-19T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-10-26T13:00:00-04:00",
+      "end": "2026-10-26T16:00:00-04:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-11-02T13:00:00-05:00",
+      "end": "2026-11-02T16:00:00-05:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Group",
+      "start": "2026-11-09T13:00:00-05:00",
+      "end": "2026-11-09T16:00:00-05:00",
+      "allDay": false,
+      "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
       "url": "",
       "rsvpUrl": ""
     }
