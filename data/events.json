@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T21:29:57.308123+00:00",
+  "generatedAt": "2026-09-08T15:19:07.121494+00:00",
   "events": [
     {
       "title": "Dexter Howard's PhD Defense",
@@ -20,6 +20,16 @@
       "description": "",
       "url": "",
       "rsvpUrl": ""
+    },
+    {
+      "title": "Writing Successful Student-Initiated Proposals",
+      "start": "2026-09-21T10:00:00-04:00",
+      "end": "2026-09-21T12:30:00-04:00",
+      "allDay": false,
+      "location": "Graduate Life Center at Virginia Tech Graduate School (155 Otey St NW, Blacksburg, VA 24061, United States)",
+      "description": "",
+      "url": "",
+      "rsvpUrl": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=hGiVYK0Q-kCGPU8yweOjetT9we5iFEpHl4mvNhX4JHxUNFg4UlIyVDRPRjlXREJGU00wMjUzVERYTy4u&route=shorturl"
     },
     {
       "title": "Writing Group",
