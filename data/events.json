@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T21:44:28.354184+00:00",
+  "generatedAt": "2026-10-21T16:07:18.539824+00:00",
   "events": [
     {
       "title": "Writing Group",
@@ -27,6 +27,16 @@
       "end": "2026-11-09T16:00:00-05:00",
       "allDay": false,
       "location": "Virginia Tech Inn Hucklebarry room",
+      "description": "",
+      "url": "",
+      "rsvpUrl": ""
+    },
+    {
+      "title": "BioSci Town Hall Meeting - Prelim Exam Guidelines",
+      "start": "2026-11-11T15:00:00-05:00",
+      "end": "2026-11-11T16:30:00-05:00",
+      "allDay": false,
+      "location": "Life Sciences 1; Room 101",
       "description": "",
       "url": "",
       "rsvpUrl": ""
